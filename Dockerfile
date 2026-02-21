@@ -1,0 +1,14 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+COPY stream_producer.py .
+COPY hotel_raw_stream.csv .
+
+CMD ["python", "stream_producer.py"]
+
+
+

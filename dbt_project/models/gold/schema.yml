@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: fact_booking
+    description: "Tüm rezervasyon kayıtlarını içeren fact tablosu"
+    columns:
+      - name: booking_id
+        description: "Rezervasyon ID"
+        tests:
+          - not_null
+          - unique
+      - name: hotel_id
+        description: "Otel ID"
+        tests:
+          - not_null
+      - name: customer_id
+        description: "Müşteri ID"
+        tests:
+          - not_null
+      - name: total_price
+        description: "Toplam fiyat"
+        tests:
+          - not_null
+
+  - name: dim_city
+    description: "Şehir bazlı otel ve rezervasyon özeti"
+    columns:
+      - name: city
+        description: "Şehir adı"
+        tests:
+          - not_null
+          - unique
+
+  - name: kpi_revenue
+    description: "Aylık gelir KPI tablosu"
+    columns:
+      - name: booking_month
+        description: "Rezervasyon ayı"
+        tests:
+          - not_null

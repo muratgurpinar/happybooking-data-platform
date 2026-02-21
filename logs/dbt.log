@@ -1,0 +1,34 @@
+[0m16:24:16.823042 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10af9c590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be47b10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be47c50>]}
+
+
+============================== 16:24:16.825919 | 03b5747a-b092-47c2-94ca-913f66ab4654 ==============================
+[0m16:24:16.825919 [info ] [MainThread]: Running with dbt=1.11.6
+[0m16:24:16.826207 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'log_path': 'logs', 'invocation_command': 'dbt init dbt_project', 'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'profiles_dir': '/Users/muratgurpinar/.dbt', 'static_parser': 'True', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'cache_selected_only': 'False', 'warn_error': 'None', 'log_format': 'default', 'log_cache_events': 'False', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'partial_parse': 'True', 'debug': 'False', 'no_print': 'None', 'quiet': 'False', 'target_path': 'None'}
+[0m16:24:16.834187 [info ] [MainThread]: Creating dbt configuration folder at /Users/muratgurpinar/.dbt
+[0m16:24:16.835096 [debug] [MainThread]: Starter project path: /Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/dbt/include/starter_project
+[0m16:24:16.838850 [info ] [MainThread]: 
+Your new dbt project "dbt_project" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:24:16.839002 [info ] [MainThread]: Setting up your profile.
+[0m16:24:32.025269 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m16:24:32.026045 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m16:24:32.026189 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m16:28:42.255734 [info ] [MainThread]: Profile dbt_project written to /Users/muratgurpinar/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m16:28:42.343569 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 265.5602, "process_in_blocks": "0", "process_kernel_time": 0.23514, "process_mem_max_rss": "128434176", "process_out_blocks": "0", "process_user_time": 1.166093}
+[0m16:28:42.344765 [debug] [MainThread]: Command `dbt init` succeeded at 16:28:42.344521 after 265.56 seconds
+[0m16:28:42.346209 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bef7e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c191b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10beeb240>]}
+[0m16:28:42.347015 [debug] [MainThread]: Flushing usage events
+[0m16:28:49.198096 [debug] [MainThread]: An error was encountered while trying to flush usage events

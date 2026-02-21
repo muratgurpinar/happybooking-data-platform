@@ -1,0 +1,4 @@
+hotel_raw_batch.csv
+hotel_raw_stream.csv
+logs/
+*.csv
