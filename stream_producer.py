@@ -1,4 +1,5 @@
 # stream_producer.py
+import os
 import csv
 import json
 import time
@@ -6,7 +7,7 @@ import random
 from azure.eventhub import EventHubProducerClient, EventData
 
 # ── CONNECTION ─────────────────────────────────────────────
-CONNECTION_STR = "Endpoint=sb://eseham8hii5dkopcxlrh4h.servicebus.windows.net/;SharedAccessKeyName=key_9700ff52-1e8c-456a-b12d-317456bcec8f;SharedAccessKey=dqeRLv0mjY0gAdlDk9Y27Rt1iclfxHmLm+AEhAtiq38="
+CONNECTION_STR = os.environ.get("EVENT_HUB_CONNECTION_STR", "")
 EVENTHUB_NAME  = "es_cf85ce93-8fbd-45a5-b9c3-1536c7287734"
 CSV_FILE       = "hotel_raw_stream.csv"
 DELAY_SECONDS  = 0.5  # her event arasında bekleme süresi
