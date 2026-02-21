@@ -1,0 +1,30 @@
+name: HappyBooking CI
+
+on:
+  push:
+    branches: [ main, dev ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  dbt-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install dbt-fabric
+
+      - name: Run DBT tests
+        env:
+          DBT_TOKEN: ${{ secrets.DBT_TOKEN }}
+        run: |
+          cd dbt_project
+          dbt test
